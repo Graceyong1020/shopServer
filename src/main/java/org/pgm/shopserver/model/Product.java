@@ -1,11 +1,17 @@
 package org.pgm.shopserver.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name = "product")
@@ -27,5 +33,5 @@ public class Product {
     @CreationTimestamp
     @Column(name="create_time", nullable = false)
     private LocalDateTime createTime;
-       
+
 }

@@ -1,12 +1,17 @@
 package org.pgm.shopserver.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
-import javax.management.relation.Role;
 import java.time.LocalDateTime;
 
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name="users")
