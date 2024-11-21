@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    Optional<User> findByUsername(String username); //Optional 생략해도됨
+    User findByUsername(String username); //Optional 생략해도됨
 
     @Modifying
     @Query("update User set role = :role where username = :username") // :role, :username은 파라미터로 받은 값으로 대체

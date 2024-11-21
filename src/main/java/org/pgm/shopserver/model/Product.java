@@ -28,7 +28,7 @@ public class Product {
     private String description;
 
     @Column(name="price", nullable = false)
-    private double price;
+    private Integer price;
 
     @CreationTimestamp
     @Column(name="create_time", nullable = false)
